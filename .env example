@@ -1,0 +1,41 @@
+=========================
+
+TELEGRAM
+
+=========================
+
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+OWNER_TELEGRAM_ID=your_telegram_user_id
+
+=========================
+
+REAL EXPLOITS
+
+=========================
+
+REAL_EXPLOITS _MODE=true
+MAX_REAL_EXPLOITS _REPORTS=100000000000
+REPORT_DELAY_MS=50
+SHOW_PROGRESS=true
+
+=========================
+
+EMAIL
+
+=========================
+
+GMAIL_SENDER_EMAIL=yourgmail@gmail.com
+REPORT_RECIPIENT_EMAIL=your-recipient@example.com
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GMAIL_REFRESH_TOKEN=
+
+=========================
+
+BOT
+
+=========================
+
+BOT_NAME=REAL EXPLOITS
+OWNER_NAME=Simon Tech
