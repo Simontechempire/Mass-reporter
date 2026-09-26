@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #fff;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 105, 180, .25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(120, 90, 255, .25), transparent 30%),
+        #090912;
+}
+
+body::before {
+    content: "✦";
+    position: fixed;
+    top: 8%;
+    left: 8%;
+    font-size: 35px;
+    opacity: .5;
+}
+
+body::after {
+    content: "✧";
+    position: fixed;
+    right: 10%;
+    top: 18%;
+    font-size: 45px;
+    opacity: .4;
+}
+
+.dashboard {
+    width: min(900px, 94%);
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 34px;
+    background: linear-gradient(90deg, #ff8bd8, #b59cff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header p {
+    margin-top: 8px;
+    color: #c9bfd4;
+}
+
+.status-card,
+.control-card,
+.logs {
+    background: rgba(24, 18, 35, .85);
+    border: 1px solid rgba(255, 137, 215, .25);
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    margin-bottom: 18px;
+    color: #ff9dde;
+}
+
+label {
+    display: block;
+    margin: 12px 0 7px;
+    color: #ddd1e7;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #493653;
+    border-radius: 10px;
+    background: #100c18;
+    color: #fff;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ff82d5;
+    box-shadow: 0 0 12px rgba(255, 130, 213, .2);
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff5fba, #8b6cff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 95, 186, .3);
+}
+
+#status {
+    color: #72f5b0;
+    font-weight: bold;
+}
+
+pre {
+    white-space: pre-wrap;
+    color: #ffc9ec;
+    background: #0b0910;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 100px;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
