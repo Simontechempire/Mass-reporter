@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="france">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ bot_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>🤖 {{ bot_name }}</h1>
+            <p>Control Dashboard</p>
+        </header>
+
+        <section class="status-card">
+            <h2>📊 System Status</h2>
+            <p id="status">Checking...</p>
+        </section>
+
+        <section class="control-card">
+            <h2>🧪 exploits </h2>
+
+            <label for="target">Target</label>
+            <input id="target" type="text" placeholder="Enter number target">
+
+            <label for="count">exploits Reports</label>
+            <input id="count" type="number" placeholder="1000">
+
+            <button onclick="start real exploits ()">
+                🚀 Start exploits 
+            </button>
+        </section>
+
+        <section class="logs">
+            <h2>📜 Activity</h2>
+            <pre id="logs">Waiting for activity...</pre>
+        </section>
+    </div>
+
+    <script>
+        async function checkStatus() {
+            const response = await fetch("/api/status");
+            const data = await response.json();
+
+            document.getElementById("status").textContent =
+                `${data.status} — ${data.mode}`;
+        }
+
+        function start real exploits () {
+            document.getElementById("logs").textContent =
+                "🧪 exploit started...\n" +
+                "📊  real reports are being sent.";
+        }
+
+        checkStatus();
+    </script>
+</body>
+</html>
